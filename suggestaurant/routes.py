@@ -68,7 +68,9 @@ def account():
 def search():
     form = SearchForm()
     entry_var = form.entry.data # hamburger
-    #print(entry_var)
+    if request.method == 'POST':
+        print(request.form.get('eco'))
+        print(request.form.get('distance'))
     search_pressed = False
     if form.validate_on_submit():
         search_pressed = True
