@@ -16,5 +16,16 @@
             </div>
         </form>
     </div>
+    <div>
+        {% if search_pressed == true %}
+        <div>
+            <ul class="collection">
+                {% for restaurant in arr %}
+                    <li class="collection-item">{{ restaurant }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
 </div>
 {% endblock content %}

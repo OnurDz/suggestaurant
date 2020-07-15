@@ -3,7 +3,7 @@ from suggestaurant import app, db, bcrypt
 from suggestaurant.forms import RegistrationForm, LoginForm, UpdateAccountForm, SearchForm
 from suggestaurant.models import User
 from flask_login import login_user, current_user, logout_user, login_required
-
+import html
 
 @app.route("/home")
 @app.route("/")
@@ -67,6 +67,10 @@ def account():
 @login_required
 def search():
     form = SearchForm()
-    entry_var = form.entry.data
-    print(entry_var)
-    return render_template('search.html', title='Search', form=form)
+    entry_var = form.entry.data # hamburger
+    #print(entry_var)
+    search_pressed = False
+    if form.validate_on_submit():
+        search_pressed = True
+    arr = ["restaurant1", "restaurant2", "restaurant3"]
+    return render_template('search.html', title='Search', form=form, arr=arr, search_pressed=search_pressed)
