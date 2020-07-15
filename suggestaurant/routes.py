@@ -1,6 +1,6 @@
 from flask import render_template, flash, redirect, url_for, request
 from suggestaurant import app, db, bcrypt
-from suggestaurant.forms import RegistrationForm, LoginForm, UpdateAccountForm
+from suggestaurant.forms import RegistrationForm, LoginForm, UpdateAccountForm, SearchForm
 from suggestaurant.models import User
 from flask_login import login_user, current_user, logout_user, login_required
 
@@ -9,10 +9,6 @@ from flask_login import login_user, current_user, logout_user, login_required
 @app.route("/")
 def home():
     return render_template('home.html')
-
-@app.route("/about")
-def about():
-    return render_template('about.html')
 
 @app.route("/register", methods=['GET','POST'])
 def register():
@@ -37,7 +33,7 @@ def login():
         user = User.query.filter_by(email=form.email.data).first()
         if user and bcrypt.check_password_hash(user.password, form.password.data):
             login_user(user, remember=form.remember.data)
-            return redirect(url_for('home'))
+            return redirect(url_for('search'))
         else:
             flash('Login Unsuccessful! Please check your email and password', 'danger')
     return render_template('login.html', title='Login', form=form)
@@ -66,3 +62,11 @@ def account():
         form.address.data = current_user.address
     image_file = url_for('static', filename='profile_pics/default.jpg')
     return render_template('account.html', title='Account', image_file=image_file, form=form)
+
+@app.route('/search', methods=['GET', 'POST'])
+@login_required
+def search():
+    form = SearchForm()
+    entry_var = form.entry.data
+    print(entry_var)
+    return render_template('search.html', title='Search', form=form)
