@@ -122,26 +122,3 @@ def fuzz(x):
 
 def fuzzy_and(f, s):
     return (f + s) / 2
-
-def main():
-    entry1 = [10, 10, 10]
-    entry2 = [9.2, 8.9, 9.0]
-    entry3 = [7.8, 8.5, 8.9]
-    entry4 = [7.6, 7.2, 6.7]
-    entry5 = [6.7, 6.4, 5.5]
-    entry6 = [1, 7, 4]
-    entry7 = [7, 4, 8]
-    print(defuzz(entry1))
-    print(defuzz(entry2))
-    print(defuzz(entry3))
-    print(defuzz(entry4))
-    print(defuzz(entry5))
-    print(defuzz(entry6))
-    print(defuzz(entry7))
-
-if __name__ == '__main__':
-    main()
-
-
-#if taste_is_bad then low
-#if sp_slow and serv_not_suff then low 
