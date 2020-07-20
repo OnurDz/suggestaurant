@@ -103,16 +103,7 @@ def defuzz(entry):
     upper = low * (0 + 10 + 20 + 30 + 40) + med * (50 + 60 + 70) + high * (80 + 90 + 100)
     lower = 5 * low + 3 * med + 3 * high
     return upper/lower
-
-def economy(ec):
-    return
-
-def discount(dc):
-    return
-
-def distance(dt):
-    return
-
+    
 def fuzz(x):
     if x > 1:
         x = 1
