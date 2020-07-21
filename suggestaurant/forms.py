@@ -54,3 +54,9 @@ class SearchForm(FlaskForm):
     entry = StringField('Please enter a food name: ', validators=[DataRequired()])
     eco = BooleanField('Eco Mode:')
 
+    disc = BooleanField('At a Discount:')
+
+    dist_choices = ["5","10","20","30"]
+    distance = SelectField('Choose Distance: ', choices=dist_choices)
+
+    submit = SubmitField('Search')

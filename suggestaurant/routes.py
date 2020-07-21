@@ -3,6 +3,7 @@ from suggestaurant import app, db, bcrypt
 from suggestaurant.forms import RegistrationForm, LoginForm, UpdateAccountForm, SearchForm
 from suggestaurant.models import User
 from flask_login import login_user, current_user, logout_user, login_required
+import selection as s
 import html
 
 @app.route("/home")
@@ -68,11 +69,36 @@ def account():
 def search():
     form = SearchForm()
     entry_var = form.entry.data # hamburger
-    if request.method == 'POST':
-        print(request.form.get('eco'))
-        print(request.form.get('distance'))
+    eco = form.eco.data
+    disc = form.disc.data
+    distance = form.distance.data
+
+    res_by_best = s.return_by_best()
+    res_by_entry = filter_by_category(res_by_best, entry_var).head()
+
+    res_name = res_by_entry['name'].tolist()
+    res_score = res_by_entry['score'].tolist()
+    res_disc = res_by_entry['discount'].tolist()
+
+    res_name_disc = s.get_discounted(res_by_entry)['name'].tolist()
+    res_name_disc_amount = s.get_discounted(res_by_entry)['discount'].tolist()
+
+    res_name_eco = s.sort_by_eco(res_by_entry)['name']
+
     search_pressed = False
-    if form.validate_on_submit():
-        search_pressed = True
-    arr = ["restaurant1", "restaurant2", "restaurant3"]
-    return render_template('search.html', title='Search', form=form, arr=arr, search_pressed=search_pressed)
+    if request.method == 'POST':
+        search_pressed=True
+
+    if eco == True:
+        res_name=res_name_eco
+    else:
+        res_name=res_name
+
+    if disc == True:
+        return render_template('search.html', title='Search', form=form, arr_name=res_name_disc, arr_disc=res_name_disc_amount, search_pressed=search_pressed, disc=disc)
+    else:
+        return render_template('search.html', title='Search', form=form, arr_name=res_name, arr_disc = [], search_pressed=search_pressed, disc=disc)
+
+
+def filter_by_category(df, food):
+    return df[df.categories == food]

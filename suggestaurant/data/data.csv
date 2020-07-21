@@ -1,26 +1,26 @@
 name,speed,taste,serv_quality,eco,discount,categories
-Turtles Pizza,7.8,8.2,8.0,3,0,"pizza"
-Harrbi,6.8,7.2,6.0,7,0,"döner"
-Komagene,8.8,8.5,8.0,6,25,"çiğköfte"
-Nusret Steakhouse,7.3,7.9,9.2,1,0,"kebap"
-Köroğlu İşkembe,8.5,9.2,7.9,3,0,"çorba"
-Pastannecim,9.7,8.9,8.6,5,0,"pastane"
-Çiğköftesim,8.9,9.2,8.2,7,0,"çiğköfte"
-Şişman Usta Köfte,7.5,8.3,7.2,6,0,"köfte"
-Popüler Döner,7.7,6.9,7.2,7,0,"döner"
-Kekik Döner,9.1,8.5,8.3,6,0,"döner"
-Unique Burger,8.4,8.2,8.8,4,15,"hamburger"
-Anne Eli Ev Yemekleri,6.7,9.7,8.9,4,0,"ev"
-Büklüm Pide,7.1,7.9,7.2,6,0,"pide"
-Mado,5.2,6.7,5.5,3,0,"pastane"
-Tatlıcı Tombak,9.7,9.8,8.9,7,0,"pastane"
-Yiğit Usta İşkembe,9.4,9.5,9.2,5,35,"çorba"
-Demirezen Ev Yemekleri,8.8,9.9,9.2,5,25,"ev"
-Köfteci Niyazi,6.9,5.9,6.8,7,0,"köfte"
-Sepetçioğlu Pide Salonu,7.9,7.6,7.0,7,0,"pide"
-Öncü Döner,5.2,4.5,4.2,8,0,"döner"
-Burger King,5.2,6.7,5.6,6,15,"hamburger"
-Adana 01 Kebap,7.9,9.5,8.7,3,0,"kebap"
-Ankara 06 Kebap,8.2,7.8,6.9,6,0,"tantuni"
-Big Bang Burger,7.8,9.6,9.2,3,0,"hamburger"
-Kebap 67,7.4,7.1,7.0,6,0,"kebap"
+Turtles Pizza,7.8,8.2,8.0,3,0,pizza
+Harrbi,6.8,7.2,6.0,7,0,döner
+Komagene,8.8,8.5,8.0,6,25,çiğköfte
+Nusret Steakhouse,7.3,7.9,9.2,1,0,kebap
+Köroğlu İşkembe,8.5,9.2,7.9,3,0,çorba
+Pastannecim,9.7,8.9,8.6,5,0,pastane
+Çiğköftesim,8.9,9.2,8.2,7,0,çiğköfte
+Şişman Usta Köfte,7.5,8.3,7.2,6,0,köfte
+Popüler Döner,7.7,6.9,7.2,7,0,döner
+Kekik Döner,9.1,8.5,8.3,6,0,döner
+Unique Burger,8.4,8.2,8.8,4,20,hamburger
+Anne Eli Ev Yemekleri,6.7,9.7,8.9,4,0,ev
+Büklüm Pide,7.1,7.9,7.2,6,0,pide
+Mado,5.2,6.7,5.5,3,0,pastane
+Tatlıcı Tombak,9.7,9.8,8.9,7,0,pastane
+Yiğit Usta İşkembe,9.4,9.5,9.2,5,35,çorba
+Demirezen Ev Yemekleri,8.8,9.9,9.2,5,25,ev
+Köfteci Niyazi,6.9,5.9,6.8,7,0,köfte
+Sepetçioğlu Pide Salonu,7.9,7.6,7.0,7,0,pide
+Öncü Döner,5.2,4.5,4.2,8,0,döner
+Burger King,5.2,6.7,5.6,6,15,hamburger
+Adana 01 Kebap,7.9,9.5,8.7,3,0,kebap
+Ankara 06 Kebap,8.2,7.8,6.9,6,0,tantuni
+Big Bang Burger,7.8,9.6,9.2,3,0,hamburger
+Kebap 67,7.4,7.1,7.0,6,0,kebap
